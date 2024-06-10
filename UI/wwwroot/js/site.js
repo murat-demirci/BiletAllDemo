@@ -1,4 +1,10 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿const $navbar = $('navbar');
+$navbar.find('.options .btn-option').on('click', function (e) {
+    const $this = $(this);
+    $this.parent().parent().find('button.selected').find('img.icon').first().removeClass('d-none');
+    $this.parent().parent().find('button.selected').find('img.icon').last().addClass('d-none');
+    $this.parent().parent().find('button.selected').removeClass('selected').find('img.icon')
+    $this.addClass('selected');
+    $this.addClass('selected').find('img.icon').first().addClass('d-none');
+    $this.addClass('selected').find('img.icon').last().removeClass('d-none');
+})

@@ -1,4 +1,11 @@
 ﻿@model IEnumerable<Domain.Entities.KaraNokta>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "biletall.com";
+}
+<link href="~/css/style.css" rel="stylesheet" />
+
+<partial name="Partials/_TripListingPartialView"/>
+
+@section MainJS{
+    <script src="~/js/main.js"></script>
 }

@@ -1,0 +1,133 @@
+:root {
+    --bs-main-color: #252f3d;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: calc(0.32456dvw + 0.8rem);
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bs-main-color);
+}
+
+navbar .topbar {
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px groove whitesmoke;
+}
+
+navbar .site-logo {
+    float: left;
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+    margin-right: 1rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    align-self: flex-start
+}
+
+navbar .menu-list {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    list-style: none;
+    margin-right: 1rem;
+    align-self: flex-end;
+}
+
+    navbar .menu-list a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-weight: 450;
+        font-size: 1.5dvw;
+    }
+
+        navbar .menu-list a:hover {
+            color: deepskyblue;
+        }
+
+navbar .options {
+    width: 100dvw;
+    background-color: whitesmoke;
+}
+
+    navbar .options ul {
+        display: flex;
+        gap: 0.5rem;
+        list-style: none;
+        padding: 1rem;
+    }
+
+        navbar .options ul li .btn-option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 0.5rem;
+            border-radius: 1rem;
+            border: 1px groove lightgray;
+            font-weight: 600;
+            padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+            width: 7rem;
+        }
+
+            navbar .options ul li .btn-option:hover {
+                border-color: var(--bs-main-color);
+            }
+
+        navbar .options ul li button.selected {
+            border-color: var(--bs-main-color);
+            background-color: var(--bs-main-color);
+            color: lightgray;
+        }
+
+        navbar .options ul li .btn-option img.icon {
+            width: 22px;
+        }
+
+navbar .trip-search {
+    display: flex;
+    color: whitesmoke;
+}
+
+    navbar .trip-search ul.animation-header {
+        list-style: none;
+    }
+
+@media only screen and (max-width : 768px) {
+    navbar .topbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+        navbar .topbar .site-logo {
+            float: none;
+            align-self: center;
+        }
+
+        navbar .topbar .menu-list {
+            float: none;
+            align-self: center;
+        }
+
+    navbar .menu-list a {
+        font-size: 3dvw;
+    }
+
+    navbar .options ul {
+        overflow-x: auto;
+    }
+}

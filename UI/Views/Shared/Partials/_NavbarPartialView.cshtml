@@ -10,7 +10,7 @@
         </ul>
     </div>
     <div class="options">
-        <ul class="container">
+        <ul class="container mb-0">
             <li>
                 <button class="btn-option selected">
                     <img src="~/Assets/svgs/bus-dark.svg" class="icon d-none" />
@@ -41,20 +41,21 @@
             </li>
         </ul>
     </div>
-    <div class="trip-search">
-        <h2>Türkiye'nin </h2>
-        <ul class="animation-header">
-            <li><h2>Güvenilir Seyahat Uygulamasý</h2></li>
-            <li>
-                <h2>
-                    Popüler Seyahat Uygulamasý
-                </h2>
-            </li>
-            <li>
-                <h2>
-                    Bütçe Dostu Seyahat Uygulamasý
-                </h2>
-            </li>
-        </ul>
+    <div class="trip-search container">
+        <div class="search-panel row g-3">
+            <div class="from col-12 col-md-6">
+                <label class="label">Nereden</label>
+                <input class="input dropdown-toggle" id="fromDropdown" type="text" name="name" value="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                <div class="dropdown-menu rounded" style="overflow-y:auto;height:25dvh;width:100%"  aria-labelledby="fromDropdown">
+                </div>
+            </div>
+            <div class="to col-12 col-md-6">
+                <label class="label">Nereye</label>
+                <input class="input dropdown-toggle" type="text" id="toDropdown"  name="name" value="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                <div class="dropdown-menu rounded" style="overflow-y: auto; height: 25dvh; width: 100%" aria-labelledby="toDropdown">
+                </div> 
+            </div>
+            <img class="switch-svg" src="~/Assets/svgs/switch.svg" alt="switch" />
+        </div>
     </div>
 </navbar>

@@ -5,6 +5,7 @@
 * {
     box-sizing: border-box;
     font-size: calc(0.32456dvw + 0.8rem);
+    font-family:Roboto;
 }
 
 
@@ -14,100 +15,163 @@ body, html {
     background-color: var(--bs-main-color);
 }
 
-navbar .topbar {
-    padding: 1rem;
-    padding-bottom: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px groove whitesmoke;
+navbar {
+    z-index: 9999;
 }
 
-navbar .site-logo {
-    float: left;
-    display: flex;
-    align-items: end;
-    justify-content: flex-start;
-    margin-right: 1rem;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    align-self: flex-start
-}
-
-navbar .menu-list {
-    float: right;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-    list-style: none;
-    margin-right: 1rem;
-    align-self: flex-end;
-}
-
-    navbar .menu-list a {
-        text-decoration: none;
-        color: whitesmoke;
-        font-weight: 450;
-        font-size: 1.5dvw;
-    }
-
-        navbar .menu-list a:hover {
-            color: deepskyblue;
-        }
-
-navbar .options {
-    width: 100dvw;
-    background-color: whitesmoke;
-}
-
-    navbar .options ul {
-        display: flex;
-        gap: 0.5rem;
-        list-style: none;
+    navbar .topbar {
         padding: 1rem;
+        padding-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px groove whitesmoke;
+        z-index: 9999;
     }
 
-        navbar .options ul li .btn-option {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: nowrap;
-            gap: 0.5rem;
-            border-radius: 1rem;
-            border: 1px groove lightgray;
-            font-weight: 600;
-            padding: 0.3rem 0.5rem 0.3rem 0.5rem;
-            width: 7rem;
+    navbar .site-logo {
+        float: left;
+        display: flex;
+        align-items: end;
+        justify-content: flex-start;
+        margin-right: 1rem;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        align-self: flex-start
+    }
+
+    navbar .menu-list {
+        float: right;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        list-style: none;
+        margin-right: 1rem;
+        align-self: flex-end;
+    }
+
+        navbar .menu-list a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-weight: 450;
+            font-size: 1.5dvw;
         }
 
-            navbar .options ul li .btn-option:hover {
-                border-color: var(--bs-main-color);
+            navbar .menu-list a:hover {
+                color: deepskyblue;
             }
 
-        navbar .options ul li button.selected {
-            border-color: var(--bs-main-color);
-            background-color: var(--bs-main-color);
-            color: lightgray;
-        }
-
-        navbar .options ul li .btn-option img.icon {
-            width: 22px;
-        }
-
-navbar .trip-search {
-    display: flex;
-    color: whitesmoke;
-}
-
-    navbar .trip-search ul.animation-header {
-        list-style: none;
+    navbar .options {
+        width: 100%;
+        background-color: whitesmoke;
+        z-index: 9999;
     }
 
-@media only screen and (max-width : 768px) {
-    navbar .topbar {
+        navbar .options ul {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+            padding: 1rem;
+        }
+
+            navbar .options ul li .btn-option {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+                gap: 0.5rem;
+                border-radius: 1rem;
+                border: 1px groove lightgray;
+                font-weight: 600;
+                padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+                width: 7rem;
+            }
+
+                navbar .options ul li .btn-option:hover {
+                    border-color: var(--bs-main-color);
+                }
+
+            navbar .options ul li button.selected {
+                border-color: var(--bs-main-color);
+                background-color: var(--bs-main-color);
+                color: lightgray;
+            }
+
+            navbar .options ul li .btn-option img.icon {
+                width: 22px;
+            }
+
+    navbar .trip-search {
+        color: whitesmoke;
+    }
+
+        navbar .trip-search ul.animation-header {
+            list-style: none;
+        }
+
+    navbar .trip-search {
+        background-color: var(--bs-main-color);
+        color: whitesmoke;
+    }
+
+        navbar .trip-search {
+            padding:1rem;
+            width:100%;
+        }
+
+    navbar .search-panel{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        position:relative;
+    }
+        navbar .search-panel .from{
+            position:relative;
+        }
+        navbar .search-panel .to {
+            position: relative;
+        }
+        navbar .search-panel .label {
+            position: absolute;
+            top:10%;
+            left:2%;
+            color:darkgray;
+            font-weight:450;
+            padding-left:1rem;
+            font-size:16px;
+        }
+        navbar .search-panel .input {
+            color: black;
+            font-weight: 600;
+            padding: 1rem;
+            padding-top: 1.5rem;
+            background-color: whitesmoke;
+            border-radius: 1.5rem;
+            width: 100%;
+            z-index: -1;
+        }
+        navbar .search-panel .input:focus-visible{
+            outline-color:deepskyblue;
+            border:none;
+        }
+
+            navbar .search-panel .switch-svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                width: 64px !important;
+                border-radius: 50%;
+                border: 1px solid #d1d1d1;
+            }
+
+        @media only screen and (max-width : 768px) {
+            navbar .topbar {
         flex-direction: column;
         justify-content: center;
         align-items: center;

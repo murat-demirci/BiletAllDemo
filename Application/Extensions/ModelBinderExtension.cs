@@ -28,6 +28,6 @@ public static class ModelBinderExtension
                 karaNoktaList.Add(karaNokta);
             }
         }
-        return karaNoktaList?.AsQueryable().Where(x => x.UlkeKodu == "TR" && x.MerkezMi == isMerkez).AsEnumerable();
+        return karaNoktaList?.AsQueryable().Where(x => x.UlkeKodu == "TR" && x.MerkezMi == isMerkez).OrderByDescending(x=>x.Ad).AsEnumerable();
     }
 }
